@@ -1,0 +1,31 @@
+1. .env.local
+don't want to show client ID
+GithubState.js
+initialize let githubClientID;
+let githubClientSecret;
+
+want to check the environment
+if (process.env.NODE_ENV !== 'production') {
+    githubClientID = process.env.REACT_APP_GITHUB_CLIENT_ID
+    // do the same thing for client secret
+} else {
+    githubClientID = process.env.GITHUB_CLIENT_ID
+}
+
+replace github state the axios lines with global variables that
+were initalized above
+
+install netlify cli
+npm sudo i -g netlify-cli
+
+make a netlify account
+
+create config file in root called netlify.toml
+then netlify init
+yes
+netlify dashboard
+add global environment variables
+>> deploy settings
+>> environment variables
+>> edit variables
+>> GLITHUB_CLIENT_ID and SECRET
