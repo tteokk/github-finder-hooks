@@ -29,3 +29,6 @@ add global environment variables
 >> environment variables
 >> edit variables
 >> GLITHUB_CLIENT_ID and SECRET
+
+npm run build
+netlify deploy --prod
